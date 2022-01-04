@@ -47,13 +47,6 @@ hash_key usage:<br/>
 
 auth_string format:<br/>
 &nbsp;   [salt] $s_ms$ [magic_string] $ks$ [encryption_salt]<br/>
-&nbsp;   ---------------------------------------------------<br/>
-
-Two Key derivation process:<br/>
-&nbsp;Derive master key with [salt] and decrypt [magic_string][:magic_string_len]<br/> 
-&nbsp;if decrypted [:magic_string_len] and [magic_string_len:] are identical, decrypt [encryption_salt]<br/>
-&nbsp;Derive encryption key with decrypted [encryption_salt] for encrypting/decrypting secret.<br/>
-    
 
 ### Dependency
 bcrypt(https://pypi.org/project/bcrypt/)<br/>
